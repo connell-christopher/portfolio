@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #050505;
+  --card: #0f0f0f;
+  --border: #1d1d1d;
+  --green: #00ff9d;
+  --text: #d8d8d8;
+  --muted: #8a8a8a;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: auto;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(5,5,5,0.75);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.logo {
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+}
+
+/* TERMINAL */
+.terminal {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 18px;
+}
+
+.terminal-top {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f57; }
+.yellow { background: #ffbd2e; }
+.green { background: #28c840; }
+
+/* CARDS */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 30px;
+  border-radius: 18px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 14px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.primary {
+  background: var(--green);
+  color: black;
+}
+
+.secondary {
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+
+/* TEXT */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.section-sub {
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+/* LAYOUTS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 50px 0;
+  text-align: center;
+  color: var(--muted);
+}
