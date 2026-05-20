@@ -1,7 +1,3 @@
-/* =========================
-   BASE RESET
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -21,59 +17,33 @@ body {
   font-family: "JetBrains Mono", monospace;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
   overflow-x: hidden;
 }
-
-/* =========================
-   BACKGROUND EFFECT
-========================= */
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    linear-gradient(rgba(0,255,157,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,157,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* =========================
-   LAYOUT
-========================= */
 
 .container {
   width: min(1200px, 92%);
   margin: auto;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-
+/* NAV */
 nav {
   position: sticky;
   top: 0;
-  z-index: 100;
-  backdrop-filter: blur(12px);
-  background: rgba(5,5,5,0.75);
+  background: rgba(5,5,5,0.8);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
+  z-index: 100;
 }
 
 .nav-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 18px 0;
 }
 
 .logo {
   color: var(--green);
   font-weight: 700;
-  letter-spacing: 2px;
 }
 
 .nav-links {
@@ -84,19 +54,11 @@ nav {
 .nav-links a {
   color: var(--muted);
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.nav-links a:hover {
-  color: var(--green);
-}
-
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -104,13 +66,41 @@ nav {
 .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 50px;
-  align-items: center;
+  gap: 40px;
 }
 
+/* TERMINAL */
+.terminal {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.terminal-top {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: #0b0b0b;
+}
+
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.red { background: #ff5f57; }
+.yellow { background: #ffbd2e; }
+.green { background: #28c840; }
+
+.terminal-body {
+  padding: 20px;
+}
+
+.line {
+  color: var(--green);
+  margin-bottom: 8px;
+}
+
+/* TEXT */
 h1 {
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
-  color: #fff;
+  font-size: 3rem;
   margin: 20px 0;
 }
 
@@ -122,60 +112,17 @@ p {
   color: var(--muted);
 }
 
-/* =========================
-   TERMINAL
-========================= */
-
-.terminal {
-  border: 1px solid var(--border);
-  background: var(--card);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.terminal-top {
-  display: flex;
-  gap: 8px;
-  padding: 12px;
-  border-bottom: 1px solid var(--border);
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.red { background: #ff5f57; }
-.yellow { background: #ffbd2e; }
-.green { background: #28c840; }
-
-.terminal-body {
-  padding: 20px;
-}
-
-.line {
-  color: var(--green);
-  margin-bottom: 10px;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
+/* BUTTONS */
 .btns {
+  margin-top: 20px;
   display: flex;
-  gap: 15px;
-  margin-top: 25px;
-  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .btn {
-  padding: 12px 18px;
-  border-radius: 10px;
+  padding: 10px 16px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
 }
 
 .primary {
@@ -188,87 +135,55 @@ p {
   color: var(--green);
 }
 
-/* =========================
-   SECTIONS
-========================= */
-
+/* SECTIONS */
 section {
-  padding: 90px 0;
+  padding: 80px 0;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
 .section-sub {
   color: var(--muted);
-  margin-bottom: 40px;
-  max-width: 700px;
+  margin-bottom: 30px;
 }
 
-/* =========================
-   GRID SYSTEM (FIXED)
-========================= */
-
+/* CARDS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-
-/* =========================
-   CARDS (UNIFIED)
-========================= */
 
 .card {
   background: var(--card);
   border: 1px solid var(--border);
-  padding: 25px;
+  padding: 20px;
   border-radius: 14px;
-  transition: 0.25s ease;
 }
 
-.card:hover {
-  border-color: var(--green);
-  transform: translateY(-3px);
-}
-
-.card h3 {
-  color: var(--green);
-  margin-bottom: 10px;
-}
-
-/* =========================
-   PROJECT BLOCK
-========================= */
-
+/* PROJECT */
 .project {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  padding: 30px;
   background: var(--card);
+  padding: 30px;
+  border-radius: 18px;
   border: 1px solid var(--border);
-  border-radius: 16px;
-  align-items: center;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 50px 0;
+  padding: 40px 0;
   border-top: 1px solid var(--border);
   color: var(--muted);
 }
 
-/* =========================
-   RESPONSIVE FIX
-========================= */
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .hero-grid,
   .project {
