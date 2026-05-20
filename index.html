@@ -11,7 +11,6 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
   <div class="glow one"></div>
@@ -31,6 +30,7 @@
     </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
 
@@ -45,34 +45,29 @@
           <div class="terminal-body">
             <div class="line">root@pentrasec:~# initializing scan engine...</div>
             <div class="line">[+] HTTP analysis loaded</div>
-            <div class="line">[+] Header inspection active</div>
             <div class="line">[+] Recon modules online</div>
-            <div class="line">[+] PentraSec ready</div>
+            <div class="line">[+] System ready</div>
           </div>
         </div>
 
         <h1>Cybersecurity <span>Researcher</span> & Builder</h1>
 
         <p>
-          I build offensive security tools, vulnerability scanners, reconnaissance workflows,
-          and modern cyber-focused web systems. Focused on practical AppSec, automation,
-          and scalable security tooling.
+          Security automation, reconnaissance systems, and web application analysis tooling.
         </p>
 
         <div class="btns">
           <a href="#projects" class="btn primary">View Projects</a>
-          <a href="https://connell-christopher.github.io/pentrasec.it.com/" target="_blank" class="btn secondary">Open PentraSec</a>
+          <a href="https://pentrasec-scanner-1.onrender.com/" target="_blank" class="btn secondary">Open Tool</a>
         </div>
       </div>
 
       <div class="project-box">
-        <div class="tag">LIVE SECURITY STATUS</div>
-
+        <div class="tag">LIVE STATUS</div>
         <div class="scan-line">▸ Target: example.com</div>
-        <div class="scan-line">▸ Status: SUCCESS</div>
-        <div class="scan-line">▸ CSP Header: Missing</div>
-        <div class="scan-line">▸ HSTS: Missing</div>
-        <div class="scan-line">▸ Risk Level: MEDIUM</div>
+        <div class="scan-line">▸ Status: OK</div>
+        <div class="scan-line">▸ Missing CSP</div>
+        <div class="scan-line">▸ Risk: MEDIUM</div>
       </div>
 
     </div>
@@ -81,10 +76,9 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <h2 class="section-title">About</h2>
       <p class="section-sub">
-        I focus on cybersecurity engineering, reconnaissance workflows, web application security,
-        and offensive tooling.
+        Cybersecurity engineering focused on automation, reconnaissance, and application security testing.
       </p>
     </div>
   </section>
@@ -96,18 +90,18 @@
 
       <div class="cards">
         <div class="card">
-          <h3>Reconnaissance</h3>
-          <p>Subdomain enumeration, endpoint discovery, asset mapping.</p>
+          <h3>Recon</h3>
+          <p>Subdomains, endpoints, attack surface mapping</p>
         </div>
 
         <div class="card">
           <h3>Web Security</h3>
-          <p>Headers, misconfigurations, attack surface analysis.</p>
+          <p>Headers, misconfigurations, vulnerabilities</p>
         </div>
 
         <div class="card">
           <h3>Automation</h3>
-          <p>Python-based scanners and security workflows.</p>
+          <p>Python-based security tooling</p>
         </div>
       </div>
     </div>
@@ -116,25 +110,23 @@
   <!-- TOOLING -->
   <section id="tooling">
     <div class="container">
-      <h2 class="section-title">Security Tooling Ecosystem</h2>
+      <h2 class="section-title">Tooling Ecosystem</h2>
 
       <div class="cards">
-
         <div class="card">
-          <h3>Recon Tools</h3>
-          <p>subfinder, amass, httpx, dnsx, naabu</p>
+          <h3>Recon</h3>
+          <p>subfinder, amass, httpx, dnsx</p>
         </div>
 
         <div class="card">
-          <h3>Vulnerability Tools</h3>
+          <h3>Vuln Testing</h3>
           <p>nuclei, ffuf, sqlmap, dalfox</p>
         </div>
 
         <div class="card">
           <h3>OSINT</h3>
-          <p>maltego, recon-ng, github dorks</p>
+          <p>maltego, recon-ng, gitleaks</p>
         </div>
-
       </div>
     </div>
   </section>
@@ -142,23 +134,23 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title">Featured Project</h2>
+      <h2 class="section-title">Projects</h2>
 
       <div class="project">
 
         <div>
           <h2>PentraSec Scanner</h2>
-          <p>HTTP analysis, header checks, and recon automation.</p>
+          <p>Security analysis and reconnaissance automation tool.</p>
 
           <a href="https://pentrasec-scanner-1.onrender.com/" target="_blank" class="btn primary">
-            Launch Scanner
+            Launch
           </a>
         </div>
 
         <div class="terminal">
           <div class="terminal-body">
-            <div class="line">Scanning target...</div>
-            <div class="line">Status: 200</div>
+            <div class="line">Scanning...</div>
+            <div class="line">200 OK</div>
             <div class="line">Missing CSP</div>
           </div>
         </div>
@@ -171,40 +163,18 @@
   <section id="operations">
     <div class="container">
 
-      <h2 class="section-title">Operational Focus</h2>
+      <h2 class="section-title">Operations</h2>
 
-      <p class="section-sub">
-        Security automation, attack surface analysis, reconnaissance systems, and application security research.
-      </p>
+      <div class="project">
 
-      <div class="project" style="grid-template-columns:1fr 1fr;">
-
-        <div>
-          <div class="card" style="margin-bottom:20px;">
-            <h3>Core Direction</h3>
-            <p>Building systems that automate security visibility and surface real-world web risks efficiently.</p>
-          </div>
-
-          <h3>Development Workspace</h3>
-          <p>Building cybersecurity tools, scanning systems, and automation workflows.</p>
-
-          <div class="card">
-            <h3>PentraSec Platform</h3>
-            <p>
-              <a href="https://pentrasec-scanner-1.onrender.com/" target="_blank" style="color:var(--green);text-decoration:none;">
-                ▶ Launch Live Scanner
-              </a>
-            </p>
-          </div>
+        <div class="card">
+          <h3>Focus</h3>
+          <p>Automation + attack surface mapping systems</p>
         </div>
 
         <div class="card">
-          <h3>Current Work</h3>
-
-          <p>Developing security automation tools and manual analysis systems for web applications.</p>
-          <p>Focused on reconnaissance pipelines and attack surface mapping.</p>
-          <p>Refining tooling for real-world application security testing.</p>
-
+          <h3>Work</h3>
+          <p>Building security tooling and analysis pipelines</p>
         </div>
 
       </div>
@@ -214,7 +184,7 @@
 
   <footer>
     <div class="container">
-      © 2026 PentraSec • Cybersecurity Portfolio
+      © 2026 PentraSec
     </div>
   </footer>
 
